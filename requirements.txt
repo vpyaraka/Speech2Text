@@ -1,2 +1,5 @@
 streamlit
-openai==0.28
+pytube
+openai-whisper
+deep-translator
+torch
