@@ -8,7 +8,8 @@ Original file is located at
 """
 
 import streamlit as st
-from pytube import YouTube
+from yt_dlp import YoutubeDL
+# from pytube import YouTube
 import whisper
 from deep_translator import GoogleTranslator
 import tempfile
@@ -24,7 +25,7 @@ url = st.text_input("Enter YouTube Song URL:")
 
 if url:
     try:
-        yt = YouTube(url)
+        yt = YoutubeDL(url)
         st.write(f"**Title:** {yt.title}")
 
         # Download audio
